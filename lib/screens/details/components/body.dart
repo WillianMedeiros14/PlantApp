@@ -6,7 +6,16 @@ import 'package:plantapp/screens/details/components/image_and_icons.dart';
 import 'package:plantapp/screens/details/components/title_and_price.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  const Body(
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.country,
+      required this.price})
+      : super(key: key);
+
+  final String image, title, country;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +24,14 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ImageAndIcons(size: size),
+          ImageAndIcons(
+            size: size,
+            image: image,
+          ),
           TitleAndPrice(
-            title: "Angelica",
-            country: "Russia",
-            price: 440,
+            title: title,
+            country: country,
+            price: price,
           ),
           SizedBox(
             height: kDefaultPadding,

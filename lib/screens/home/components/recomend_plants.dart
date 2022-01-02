@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constants.dart';
 import 'package:plantapp/screens/details/components/body.dart';
+import 'package:plantapp/screens/details/details_screen.dart';
 
 class RecomendsPlants extends StatefulWidget {
   const RecomendsPlants({
@@ -23,21 +24,18 @@ class _RecomendsPlantsState extends State<RecomendsPlants> {
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
           ),
           RecomendPlantCard(
             image: "assets/images/image_2.png",
             title: "Angelica",
-            country: "Russia",
-            price: 440,
-            press: () {},
+            country: "Canadá",
+            price: 450,
           ),
           RecomendPlantCard(
             image: "assets/images/image_3.png",
             title: "Samantha",
             country: "Russia",
             price: 440,
-            press: () {},
           ),
         ],
       ),
@@ -45,20 +43,23 @@ class _RecomendsPlantsState extends State<RecomendsPlants> {
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
+class RecomendPlantCard extends StatefulWidget {
   const RecomendPlantCard({
     Key? key,
     required this.image,
     required this.title,
     required this.country,
     required this.price,
-    required this.press,
   }) : super(key: key);
 
   final String image, title, country;
   final int price;
-  final Function press;
 
+  @override
+  State<RecomendPlantCard> createState() => _RecomendPlantCardState();
+}
+
+class _RecomendPlantCardState extends State<RecomendPlantCard> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -70,12 +71,24 @@ class RecomendPlantCard extends StatelessWidget {
         bottom: kDefaultPadding * 2.5,
       ),
       width: size.width * 0.4,
-      child: Column(
-        children: [
-          Image.asset(image),
-          GestureDetector(
-            onTap: press(),
-            child: Container(
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DetailsScreen(
+                title: widget.title,
+                image: widget.image,
+                country: widget.country,
+                price: widget.price,
+              ),
+            ),
+          );
+        },
+        child: Column(
+          children: [
+            Image.asset(widget.image),
+            Container(
               padding: const EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -97,11 +110,11 @@ class RecomendPlantCard extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: "$title\n".toUpperCase(),
+                          text: "${widget.title}\n".toUpperCase(),
                           style: Theme.of(context).textTheme.button,
                         ),
                         TextSpan(
-                          text: "$country".toUpperCase(),
+                          text: "${widget.country}".toUpperCase(),
                           style: TextStyle(
                             color: kPrimaryColor.withOpacity(0.5),
                           ),
@@ -111,7 +124,7 @@ class RecomendPlantCard extends StatelessWidget {
                   ),
                   Spacer(),
                   Text(
-                    '\$$price',
+                    '\$${widget.price}',
                     style: Theme.of(context)
                         .textTheme
                         .button!
@@ -120,8 +133,8 @@ class RecomendPlantCard extends StatelessWidget {
                 ],
               ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constants.dart';
-import 'package:plantapp/screens/details/details_screen.dart';
 import 'package:plantapp/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: DetailsScreen(),
+      home: HomeScreen(),
     );
   }
 }

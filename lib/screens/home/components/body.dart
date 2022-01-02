@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:plantapp/constants.dart';
+import 'package:plantapp/screens/details/details_screen.dart';
 import 'package:plantapp/screens/home/components/featured_plants.dart';
 import 'package:plantapp/screens/home/components/header_with_searchbox.dart';
 import 'package:plantapp/screens/home/components/recomend_plants.dart';
 import 'package:plantapp/screens/home/components/title_with_more_btn.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +26,7 @@ class Body extends StatelessWidget {
           FeaturedPlants(),
           SizedBox(
             height: kDefaultPadding,
-          )
+          ),
         ],
       ),
     );
