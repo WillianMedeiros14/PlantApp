@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constants.dart';
+import 'package:plantapp/screens/details/details_screen.dart';
 import 'package:plantapp/screens/home/home_screen.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: DetailsScreen(),
     );
   }
 }

@@ -4,9 +4,14 @@ import 'package:plantapp/components/my_bottom_nav_bar.dart';
 import 'package:plantapp/constants.dart';
 import 'package:plantapp/screens/home/components/body.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/constants.dart';
+import 'package:plantapp/screens/details/components/body.dart';
 
-class RecomendsPlants extends StatelessWidget {
+class RecomendsPlants extends StatefulWidget {
   const RecomendsPlants({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<RecomendsPlants> createState() => _RecomendsPlantsState();
+}
+
+class _RecomendsPlantsState extends State<RecomendsPlants> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
