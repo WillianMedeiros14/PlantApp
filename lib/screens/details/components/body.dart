@@ -21,6 +21,54 @@ class Body extends StatelessWidget {
             country: "Russia",
             price: 440,
           ),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: kPrimaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Buy Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: SizedBox(
+                  height: 84,
+                  child: TextButton(
+                    style: TextButton.styleFrom(),
+                    onPressed: () {},
+                    child: Text(
+                      "Description",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: kDefaultPadding * 2,
+          ),
         ],
       ),
     );
