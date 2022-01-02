@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:plantapp/constants.dart';
 import 'package:plantapp/screens/home/components/header_with_searchbox.dart';
+import 'package:plantapp/screens/home/components/recomend_plants.dart';
 import 'package:plantapp/screens/home/components/title_with_more_btn.dart';
 
 class Body extends StatelessWidget {
@@ -12,10 +13,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           HeaderWithSearchBox(size: size),
-          TitleWithMoreBtn(
-            title: "Recomended",
-            press: () {},
-          ),
+          TitleWithMoreBtn(title: "Recomended", press: () {}),
+          RecomendsPlants()
         ],
       ),
     );
