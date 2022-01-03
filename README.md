@@ -5,8 +5,8 @@
 <br>
 
 <h1 align="center">
-  <img alt="Plant App" title="PlantApp" src="/assets/docs/plantapp.png" width=230/>
-  <img alt="Plant App" title="PlantApp" src="/assets/docs/plantapp2.png" width=230/>
+  <img alt="Plant App" title="PlantApp" src="assets/docs/plantapp.png" width=230/>
+  <img alt="Plant App" title="PlantApp" src="assets/docs/plantapp2.png" width=230/>
 </h1>
 
 ## 💻 Projeto
