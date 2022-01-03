@@ -1,16 +1,19 @@
-# plantapp
+<h1 align="center">
+ " Plant App "
+</h1>
 
-A new Flutter project.
+<br>
 
-## Getting Started
+<h1 align="center">
+  <img alt="Plant App" title="PlantApp" src="/assets/docs/plantapp.png" width=230/>
+  <img alt="Plant App" title="PlantApp" src="/assets/docs/plantapp2.png" width=230/>
+</h1>
 
-This project is a starting point for a Flutter application.
+## 💻 Projeto
+Aplicação criada a partir do [tutorial](https://www.youtube.com/watch?v=LN668OAUrK4&t=47s), disponível no canal [The Flutter Way](https://www.youtube.com/c/TheFlutterWay).<br>
+O objetivo foi aprender na prática alguns conceitos/widgets básicos presentes no flutter.<br><br>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 🚀 Tecnologia ultilizada
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Aplicação criada com **[Flutter](https://flutter.dev/)**.
